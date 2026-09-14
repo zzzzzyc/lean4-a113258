@@ -1,0 +1,40 @@
+A113258 Lean formalization
+Copyright 2026 zzzzzyc / zhang yichuan
+
+Original project contributions are licensed under the Apache License,
+Version 2.0. See LICENSE. Third-party rights and notices remain applicable.
+
+Formal Conjectures
+-----------------
+The sequence definition and problem statement in LeanA113258/Defs.lean and
+LeanA113258/Conjecture.lean are adapted from:
+https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/OEIS/113258.lean
+
+Copyright 2026 The Formal Conjectures Authors.
+Licensed under the Apache License, Version 2.0.
+
+Project modifications replace the factorial and finite-sum implementation
+with recursive definitions, express the question using IsPerfectPower,
+and add reduction lemmas and the proof of nonexistence for n > 4.
+
+Build dependencies
+------------------
+Mathlib, Batteries, Aesop, Qq, Plausible, LeanSearchClient, import-graph,
+and ProofWidgets use Apache-2.0. The lean4-cli dependency uses MIT
+(Copyright (c) 2021 mhuisi). Their source distributions are fetched
+separately by Lake and are not bundled in this repository. The pinned
+versions and upstream URLs are recorded in lake-manifest.json.
+
+Mathematical sources
+--------------------
+The Online Encyclopedia of Integer Sequences, entry A113258:
+https://oeis.org/A113258
+OEIS content is made available under CC BY-SA 4.0:
+https://creativecommons.org/licenses/by-sa/4.0/
+The Apache license for this project does not relicense OEIS material.
+
+Michel Laurent, Linear forms in two logarithms and interpolation
+determinants II, Acta Arithmetica 133(4) (2008), 325-348.
+https://doi.org/10.4064/aa133-4-3
+This work provides the mathematical background for the interpolation
+determinant method. The published article is not bundled or relicensed here.

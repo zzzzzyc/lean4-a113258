@@ -1,0 +1,4 @@
+import A113258FullyFormal
+
+#check LeanA113258.officialConjecture_false
+#check LeanA113258.not_perfect_power_gt_four

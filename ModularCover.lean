@@ -1,0 +1,355 @@
+import N12Cover.Block001
+import N12Cover.Block002
+import N12Cover.Block003
+import N12Cover.Block004
+import N12Cover.Block005
+import N12Cover.Block006
+import N12Cover.Block007
+import N12Cover.Block008
+import N12Cover.Block009
+import N12Cover.Block010
+import N12Cover.Block011
+import N12Cover.Block012
+import N12Cover.Block013
+import N12Cover.Block014
+import N12Cover.Block015
+import N12Cover.Block016
+import N12Cover.Block017
+import N12Cover.Block018
+import N12Cover.Block019
+import N12Cover.Block020
+import N12Cover.Block021
+import N12Cover.Block022
+import N12Cover.Block023
+import N12Cover.Block024
+import N12Cover.Block025
+import N12Cover.Block026
+import N12Cover.Block027
+import N12Cover.Block028
+import N12Cover.Block029
+import N12Cover.Block030
+import N12Cover.Block031
+import N12Cover.Block032
+import N12Cover.Block033
+import N12Cover.Block034
+import N12Cover.Block035
+import N12Cover.Block036
+import N12Cover.Block037
+import N12Cover.Block038
+import N12Cover.Block039
+import N12Cover.Block040
+import N12Cover.Block041
+import N12Cover.Block042
+import N12Cover.Block043
+import N12Cover.Block044
+import N12Cover.Block045
+import N12Cover.Block046
+import N12Cover.Block047
+import N12Cover.Block048
+import N12Cover.Block049
+import N12Cover.Block050
+import N12Cover.Block051
+import N12Cover.Block052
+import N12Cover.Block053
+import N12Cover.Block054
+import N12Cover.Block055
+import N12Cover.Block056
+import N12Cover.Block057
+import N12Cover.Block058
+import N12Cover.Block059
+import N12Cover.Block060
+import N12Cover.Block061
+import N12Cover.Block062
+import N12Cover.Block063
+import N12Cover.Block064
+import N12Cover.Block065
+import N12Cover.Block066
+import N12Cover.Block067
+import N12Cover.Block068
+import N12Cover.Block069
+import N12Cover.Block070
+import N12Cover.Block071
+import N12Cover.Block072
+import N12Cover.Block073
+import N12Cover.Block074
+import N12Cover.Block075
+import N12Cover.Block076
+import N12Cover.Block077
+import N12Cover.Block078
+import N12Cover.Block079
+import N12Cover.Block080
+import N12Cover.Block081
+import N12Cover.Block082
+import N12Cover.Block083
+import N12Cover.Block084
+import N12Cover.Block085
+import N12Cover.Block086
+import N12Cover.Block087
+import N12Cover.Block088
+import N12Cover.Block089
+import N12Cover.Block090
+import N12Cover.Block091
+import N12Cover.Block092
+import N12Cover.Block093
+import N12Cover.Block094
+import N12Cover.Block095
+import N12Cover.Block096
+import N12Cover.Block097
+import N12Cover.Block098
+import N12Cover.Block099
+import N12Cover.Block100
+import N12Cover.Block101
+import N12Cover.Block102
+import N12Cover.Block103
+import N12Cover.Block104
+import N12Cover.Block105
+import N12Cover.Block106
+import N12Cover.Block107
+import N12Cover.Block108
+
+namespace LeanA113258
+
+open CoverChecker
+
+set_option maxRecDepth 100000
+set_option maxHeartbeats 8000000
+
+/-- All residual modular certificates, retaining their primality proofs. -/
+def modularCoverCertifiedRows : List CertifiedModCertRow :=
+  LeanA113258.Generated.Block001.rows ++
+  LeanA113258.Generated.Block002.rows ++
+  LeanA113258.Generated.Block003.rows ++
+  LeanA113258.Generated.Block004.rows ++
+  LeanA113258.Generated.Block005.rows ++
+  LeanA113258.Generated.Block006.rows ++
+  LeanA113258.Generated.Block007.rows ++
+  LeanA113258.Generated.Block008.rows ++
+  LeanA113258.Generated.Block009.rows ++
+  LeanA113258.Generated.Block010.rows ++
+  LeanA113258.Generated.Block011.rows ++
+  LeanA113258.Generated.Block012.rows ++
+  LeanA113258.Generated.Block013.rows ++
+  LeanA113258.Generated.Block014.rows ++
+  LeanA113258.Generated.Block015.rows ++
+  LeanA113258.Generated.Block016.rows ++
+  LeanA113258.Generated.Block017.rows ++
+  LeanA113258.Generated.Block018.rows ++
+  LeanA113258.Generated.Block019.rows ++
+  LeanA113258.Generated.Block020.rows ++
+  LeanA113258.Generated.Block021.rows ++
+  LeanA113258.Generated.Block022.rows ++
+  LeanA113258.Generated.Block023.rows ++
+  LeanA113258.Generated.Block024.rows ++
+  LeanA113258.Generated.Block025.rows ++
+  LeanA113258.Generated.Block026.rows ++
+  LeanA113258.Generated.Block027.rows ++
+  LeanA113258.Generated.Block028.rows ++
+  LeanA113258.Generated.Block029.rows ++
+  LeanA113258.Generated.Block030.rows ++
+  LeanA113258.Generated.Block031.rows ++
+  LeanA113258.Generated.Block032.rows ++
+  LeanA113258.Generated.Block033.rows ++
+  LeanA113258.Generated.Block034.rows ++
+  LeanA113258.Generated.Block035.rows ++
+  LeanA113258.Generated.Block036.rows ++
+  LeanA113258.Generated.Block037.rows ++
+  LeanA113258.Generated.Block038.rows ++
+  LeanA113258.Generated.Block039.rows ++
+  LeanA113258.Generated.Block040.rows ++
+  LeanA113258.Generated.Block041.rows ++
+  LeanA113258.Generated.Block042.rows ++
+  LeanA113258.Generated.Block043.rows ++
+  LeanA113258.Generated.Block044.rows ++
+  LeanA113258.Generated.Block045.rows ++
+  LeanA113258.Generated.Block046.rows ++
+  LeanA113258.Generated.Block047.rows ++
+  LeanA113258.Generated.Block048.rows ++
+  LeanA113258.Generated.Block049.rows ++
+  LeanA113258.Generated.Block050.rows ++
+  LeanA113258.Generated.Block051.rows ++
+  LeanA113258.Generated.Block052.rows ++
+  LeanA113258.Generated.Block053.rows ++
+  LeanA113258.Generated.Block054.rows ++
+  LeanA113258.Generated.Block055.rows ++
+  LeanA113258.Generated.Block056.rows ++
+  LeanA113258.Generated.Block057.rows ++
+  LeanA113258.Generated.Block058.rows ++
+  LeanA113258.Generated.Block059.rows ++
+  LeanA113258.Generated.Block060.rows ++
+  LeanA113258.Generated.Block061.rows ++
+  LeanA113258.Generated.Block062.rows ++
+  LeanA113258.Generated.Block063.rows ++
+  LeanA113258.Generated.Block064.rows ++
+  LeanA113258.Generated.Block065.rows ++
+  LeanA113258.Generated.Block066.rows ++
+  LeanA113258.Generated.Block067.rows ++
+  LeanA113258.Generated.Block068.rows ++
+  LeanA113258.Generated.Block069.rows ++
+  LeanA113258.Generated.Block070.rows ++
+  LeanA113258.Generated.Block071.rows ++
+  LeanA113258.Generated.Block072.rows ++
+  LeanA113258.Generated.Block073.rows ++
+  LeanA113258.Generated.Block074.rows ++
+  LeanA113258.Generated.Block075.rows ++
+  LeanA113258.Generated.Block076.rows ++
+  LeanA113258.Generated.Block077.rows ++
+  LeanA113258.Generated.Block078.rows ++
+  LeanA113258.Generated.Block079.rows ++
+  LeanA113258.Generated.Block080.rows ++
+  LeanA113258.Generated.Block081.rows ++
+  LeanA113258.Generated.Block082.rows ++
+  LeanA113258.Generated.Block083.rows ++
+  LeanA113258.Generated.Block084.rows ++
+  LeanA113258.Generated.Block085.rows ++
+  LeanA113258.Generated.Block086.rows ++
+  LeanA113258.Generated.Block087.rows ++
+  LeanA113258.Generated.Block088.rows ++
+  LeanA113258.Generated.Block089.rows ++
+  LeanA113258.Generated.Block090.rows ++
+  LeanA113258.Generated.Block091.rows ++
+  LeanA113258.Generated.Block092.rows ++
+  LeanA113258.Generated.Block093.rows ++
+  LeanA113258.Generated.Block094.rows ++
+  LeanA113258.Generated.Block095.rows ++
+  LeanA113258.Generated.Block096.rows ++
+  LeanA113258.Generated.Block097.rows ++
+  LeanA113258.Generated.Block098.rows ++
+  LeanA113258.Generated.Block099.rows ++
+  LeanA113258.Generated.Block100.rows ++
+  LeanA113258.Generated.Block101.rows ++
+  LeanA113258.Generated.Block102.rows ++
+  LeanA113258.Generated.Block103.rows ++
+  LeanA113258.Generated.Block104.rows ++
+  LeanA113258.Generated.Block105.rows ++
+  LeanA113258.Generated.Block106.rows ++
+  LeanA113258.Generated.Block107.rows ++
+  LeanA113258.Generated.Block108.rows
+
+private theorem append_checked {xs ys : List CertifiedModCertRow}
+    (hx : xs.all (fun r => rowCheck r.row) = true)
+    (hy : ys.all (fun r => rowCheck r.row) = true) :
+    (xs ++ ys).all (fun r => rowCheck r.row) = true := by
+  rw [List.all_append, hx, hy]
+  rfl
+
+theorem modularCoverCertifiedChecked :
+    modularCoverCertifiedRows.all (fun r => rowCheck r.row) = true :=
+  append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    append_checked (
+    LeanA113258.Generated.Block001.rows_valid) LeanA113258.Generated.Block002.rows_valid) LeanA113258.Generated.Block003.rows_valid) LeanA113258.Generated.Block004.rows_valid) LeanA113258.Generated.Block005.rows_valid) LeanA113258.Generated.Block006.rows_valid) LeanA113258.Generated.Block007.rows_valid) LeanA113258.Generated.Block008.rows_valid) LeanA113258.Generated.Block009.rows_valid) LeanA113258.Generated.Block010.rows_valid) LeanA113258.Generated.Block011.rows_valid) LeanA113258.Generated.Block012.rows_valid) LeanA113258.Generated.Block013.rows_valid) LeanA113258.Generated.Block014.rows_valid) LeanA113258.Generated.Block015.rows_valid) LeanA113258.Generated.Block016.rows_valid) LeanA113258.Generated.Block017.rows_valid) LeanA113258.Generated.Block018.rows_valid) LeanA113258.Generated.Block019.rows_valid) LeanA113258.Generated.Block020.rows_valid) LeanA113258.Generated.Block021.rows_valid) LeanA113258.Generated.Block022.rows_valid) LeanA113258.Generated.Block023.rows_valid) LeanA113258.Generated.Block024.rows_valid) LeanA113258.Generated.Block025.rows_valid) LeanA113258.Generated.Block026.rows_valid) LeanA113258.Generated.Block027.rows_valid) LeanA113258.Generated.Block028.rows_valid) LeanA113258.Generated.Block029.rows_valid) LeanA113258.Generated.Block030.rows_valid) LeanA113258.Generated.Block031.rows_valid) LeanA113258.Generated.Block032.rows_valid) LeanA113258.Generated.Block033.rows_valid) LeanA113258.Generated.Block034.rows_valid) LeanA113258.Generated.Block035.rows_valid) LeanA113258.Generated.Block036.rows_valid) LeanA113258.Generated.Block037.rows_valid) LeanA113258.Generated.Block038.rows_valid) LeanA113258.Generated.Block039.rows_valid) LeanA113258.Generated.Block040.rows_valid) LeanA113258.Generated.Block041.rows_valid) LeanA113258.Generated.Block042.rows_valid) LeanA113258.Generated.Block043.rows_valid) LeanA113258.Generated.Block044.rows_valid) LeanA113258.Generated.Block045.rows_valid) LeanA113258.Generated.Block046.rows_valid) LeanA113258.Generated.Block047.rows_valid) LeanA113258.Generated.Block048.rows_valid) LeanA113258.Generated.Block049.rows_valid) LeanA113258.Generated.Block050.rows_valid) LeanA113258.Generated.Block051.rows_valid) LeanA113258.Generated.Block052.rows_valid) LeanA113258.Generated.Block053.rows_valid) LeanA113258.Generated.Block054.rows_valid) LeanA113258.Generated.Block055.rows_valid) LeanA113258.Generated.Block056.rows_valid) LeanA113258.Generated.Block057.rows_valid) LeanA113258.Generated.Block058.rows_valid) LeanA113258.Generated.Block059.rows_valid) LeanA113258.Generated.Block060.rows_valid) LeanA113258.Generated.Block061.rows_valid) LeanA113258.Generated.Block062.rows_valid) LeanA113258.Generated.Block063.rows_valid) LeanA113258.Generated.Block064.rows_valid) LeanA113258.Generated.Block065.rows_valid) LeanA113258.Generated.Block066.rows_valid) LeanA113258.Generated.Block067.rows_valid) LeanA113258.Generated.Block068.rows_valid) LeanA113258.Generated.Block069.rows_valid) LeanA113258.Generated.Block070.rows_valid) LeanA113258.Generated.Block071.rows_valid) LeanA113258.Generated.Block072.rows_valid) LeanA113258.Generated.Block073.rows_valid) LeanA113258.Generated.Block074.rows_valid) LeanA113258.Generated.Block075.rows_valid) LeanA113258.Generated.Block076.rows_valid) LeanA113258.Generated.Block077.rows_valid) LeanA113258.Generated.Block078.rows_valid) LeanA113258.Generated.Block079.rows_valid) LeanA113258.Generated.Block080.rows_valid) LeanA113258.Generated.Block081.rows_valid) LeanA113258.Generated.Block082.rows_valid) LeanA113258.Generated.Block083.rows_valid) LeanA113258.Generated.Block084.rows_valid) LeanA113258.Generated.Block085.rows_valid) LeanA113258.Generated.Block086.rows_valid) LeanA113258.Generated.Block087.rows_valid) LeanA113258.Generated.Block088.rows_valid) LeanA113258.Generated.Block089.rows_valid) LeanA113258.Generated.Block090.rows_valid) LeanA113258.Generated.Block091.rows_valid) LeanA113258.Generated.Block092.rows_valid) LeanA113258.Generated.Block093.rows_valid) LeanA113258.Generated.Block094.rows_valid) LeanA113258.Generated.Block095.rows_valid) LeanA113258.Generated.Block096.rows_valid) LeanA113258.Generated.Block097.rows_valid) LeanA113258.Generated.Block098.rows_valid) LeanA113258.Generated.Block099.rows_valid) LeanA113258.Generated.Block100.rows_valid) LeanA113258.Generated.Block101.rows_valid) LeanA113258.Generated.Block102.rows_valid) LeanA113258.Generated.Block103.rows_valid) LeanA113258.Generated.Block104.rows_valid) LeanA113258.Generated.Block105.rows_valid) LeanA113258.Generated.Block106.rows_valid) LeanA113258.Generated.Block107.rows_valid) LeanA113258.Generated.Block108.rows_valid
+
+/-- The advertised modular rows in the exact input exponent/index order. -/
+def modularCoverRows : List ModCertRow := modularCoverCertifiedRows.map (fun r => r.row)
+
+theorem modularCoverAllSound {r : ModCertRow} (hr : r ∈ modularCoverRows) :
+    ∀ b : Nat, a r.n ≠ b ^ r.e := by
+  obtain ⟨c, hc, hcr⟩ := List.mem_map.mp hr
+  rw [← hcr]
+  exact certified_row_sound c ((List.all_eq_true.mp modularCoverCertifiedChecked) c hc)
+
+end LeanA113258
