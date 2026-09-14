@@ -1,20 +1,20 @@
-# A113258 的 Lean 证明
+# A113258: No Perfect Powers for n > 4
 
-作者：**zzzzzyc / zhang yichuan**
+Author: **zzzzzyc / zhang yichuan**
 
-定义阶乘幂和序列
+Consider the factorial-power sum sequence
 
 $$
 a(n)=\sum_{i=1}^{n}(i!)^{(n-i+1)!}.
 $$
 
-本项目证明：对所有自然数 $n>4$，不存在自然数 $b>1$、$e>1$ 使 $a(n)=b^e$。
+This project proves that, for every natural number $n>4$, there are no natural numbers $b>1$ and $e>1$ such that $a(n)=b^e$.
 
-主定理为 `LeanA113258.not_perfect_power_gt_four`，存在性命题的否定为 `LeanA113258.officialConjecture_false`。
+The main theorem is `LeanA113258.not_perfect_power_gt_four`. The negation of the original existence statement is `LeanA113258.officialConjecture_false`.
 
-## 构建与审计
+## Build and audit
 
-使用 Lean **4.33.1**。`lake-manifest.json` 锁定 Mathlib 提交 `0df444a360eaa60ab8c11dca51a86af692955474`。
+The project uses Lean **4.33.1**. The file `lake-manifest.json` pins Mathlib to commit `0df444a360eaa60ab8c11dca51a86af692955474`.
 
 ```sh
 lake exe cache get
@@ -22,48 +22,48 @@ lake build
 lake env lean Audit.lean
 ```
 
-最后一条命令核对最终定理的类型，并打印解析下界、无限范围归约和主定理的公理依赖。
+The last command checks the types of the final theorems and prints the axiom dependencies of the analytic lower bound, the reduction from the infinite range, and the main theorems.
 
-## 证明概要
+## Proof outline
 
-初等数论先将潜在反例归约到 $n\ge12$、$b\ge209$、$e\ge n$，其中 $b$ 为奇数且 $\gcd(e,(n-1)!)=1$。令 $V=(n-1)!$、$F=(n-2)!$，则
+Elementary number theory reduces any putative counterexample to parameters satisfying $n\ge12$, $b\ge209$, and $e\ge n$, with $b$ odd and $\gcd(e,(n-1)!)=1$. Set $V=(n-1)!$ and $F=(n-2)!$. Then
 
 $$
 a(n)=2^V+\delta_n,\qquad 0<\delta_n<2^{3F}.
 $$
 
-若 $a(n)=b^e$，两对数线性形式 $\Lambda=e\log b-V\log2$ 是一个极小的正数。项目通过插值行列式方法，在所需的大指数、互质条件下证明显式下界。结合余项上界，得到所有潜在反例都满足
+If $a(n)=b^e$, the linear form in two logarithms $\Lambda=e\log b-V\log2$ is a very small positive number. Using interpolation determinants, the project proves an explicit lower bound under the required large-exponent and coprimality conditions. Combining this with the upper bound on the remainder shows that all remaining candidates satisfy
 
 $$
 12\le n\le2523,\qquad n\le e<3500,\qquad
 9e(n-4)<22680(n-1)+2520.
 $$
 
-素因子证书与模运算证书覆盖这个有限范围，排除全部候选。相应的排除规则、候选覆盖性和最终归约均在 Lean 中证明。
+Prime-factor and modular-arithmetic certificates cover this finite range and exclude every candidate. The exclusion rules, coverage of the candidates, and final reduction are all proved in Lean.
 
-## 信任范围
+## Trust assumptions
 
-- 解析下界与无限范围归约仅依赖 `propext`、`Classical.choice`、`Quot.sound` 三个标准公理。
-- 主定理额外使用 **119 个 `native_decide` 计算依赖**：10 批素因子证书、108 批模运算证书，以及 1 项覆盖列表检查。验证额外信任 Lean 编译器；119 是计算依赖数，并非候选数。
-- 最终证明不依赖 `sorryAx` 或未证明的 Laurent 假设。这里形式化的是原题所需的特殊两对数下界。
+- The analytic lower bound and the reduction from the infinite range depend only on the three standard axioms `propext`, `Classical.choice`, and `Quot.sound`.
+- The main theorems additionally use **119 `native_decide` computational dependencies**: 10 batches of prime-factor certificates, 108 batches of modular-arithmetic certificates, and one coverage-list check. These computations additionally trust the Lean compiler. The number 119 counts computational dependencies, not candidates.
+- The final proof does not depend on `sorryAx` or an unproved Laurent assumption. The formalization establishes the special two-logarithm lower bound needed for this problem.
 
-## 源码入口
+## Source files
 
-- `A113258Closure.lean`：最终结果入口。
-- `A113258FullyFormal.lean`：连接解析归约与有限证书。
-- `LaurentCoprimeLowerBound.lean` 及其依赖：两对数下界的证明。
-- `LeanA113258/`：序列定义与初等数论。
-- `N12Cover/`、`FactorCoverBatch*.lean` 及检查模块：嵌入 Lean 的有限证书及其验证。
-- `Audit.lean`：最终定理与公理依赖审计。
+- `A113258Closure.lean`: entry point for the final results.
+- `A113258FullyFormal.lean`: connects the analytic reduction to the finite certificates.
+- `LaurentCoprimeLowerBound.lean` and its dependencies: proof of the two-logarithm lower bound.
+- `LeanA113258/`: sequence definitions and elementary number theory.
+- `N12Cover/`, `FactorCoverBatch*.lean`, and the checker modules: finite certificates embedded in Lean and their verification.
+- `Audit.lean`: checks the final theorem statements and their axiom dependencies.
 
-## 来源
+## References
 
-- [OEIS A113258](https://oeis.org/A113258)。
-- [Formal Conjectures 中的题目陈述](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/OEIS/113258.lean)。
-- Michel Laurent, *Linear forms in two logarithms and interpolation determinants II*, Acta Arithmetica 133(4), 2008, 325–348. [DOI 10.4064/aa133-4-3](https://doi.org/10.4064/aa133-4-3)。
+- [OEIS A113258](https://oeis.org/A113258).
+- [Problem statement in Formal Conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/OEIS/113258.lean).
+- Michel Laurent, *Linear forms in two logarithms and interpolation determinants II*, Acta Arithmetica 133(4), 2008, 325–348. [DOI 10.4064/aa133-4-3](https://doi.org/10.4064/aa133-4-3).
 
-## 许可证
+## License
 
 Copyright 2026 zzzzzyc / zhang yichuan
 
-本项目的源码、证书和原创文档采用 **Apache License 2.0**，许可全文见根目录 `LICENSE`。上游署名、依赖许可和文献来源见根目录 `NOTICE`；第三方材料仍遵循各自的许可。
+The project's source code, certificates, and original documentation are licensed under the **Apache License 2.0**. See [LICENSE](LICENSE) for the full text and [NOTICE](NOTICE) for upstream attribution, dependency licenses, and references. Third-party materials remain subject to their respective licenses.
