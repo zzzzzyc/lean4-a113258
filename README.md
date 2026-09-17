@@ -1,6 +1,8 @@
 # A113258: No Perfect Powers for n > 4
 
-[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22811155.svg)](https://doi.org/10.5281/zenodo.22811155)
+**Paper:** [![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22811155.svg)](https://doi.org/10.5281/zenodo.22811155)
+
+**Code (v1.0.0):** [![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22812208.svg)](https://doi.org/10.5281/zenodo.22812208)
 
 Author: **YiChuan Zhang** (GitHub: [zzzzzyc](https://github.com/zzzzzyc))
 
@@ -25,6 +27,14 @@ the coverage argument, computational examples, and the corresponding Lean source
 The proof-source snapshot documented by the paper is
 [`8f84e18b47c99512321d136dcb7887415b30de1f`](https://github.com/zzzzzyc/lean4-a113258/commit/8f84e18b47c99512321d136dcb7887415b30de1f).
 Subsequent documentation updates do not modify that proof snapshot.
+
+## Archived software release
+
+Version **1.0.0** is archived at [10.5281/zenodo.22812208](https://doi.org/10.5281/zenodo.22812208).
+Use this version DOI to cite the proof artifact used by the paper.
+The corresponding [GitHub Release](https://github.com/zzzzzyc/lean4-a113258/releases/tag/v1.0.0)
+is fixed at commit [`266c704e766bffc993c4aa7cf5dc37b67f5cb48e`](https://github.com/zzzzzyc/lean4-a113258/commit/266c704e766bffc993c4aa7cf5dc37b67f5cb48e).
+Its Lean source and dependency configuration are unchanged from the audited snapshot identified above.
 
 ## Build and audit
 
