@@ -78,13 +78,20 @@ $33^4\equiv46\not\equiv1\pmod{53}$，因此 $a(12)$ 不是十三次幂。
 
 ### 4. 候选域与覆盖性证明
 
-记 $\mathcal F$ 为第一类证书已排除的下标集合。由指数互素条件，$e$ 的每个素因子都不小于 $n$。
-以 $\mathrm{minFac}(e)$ 表示 $e$ 的最小素因子，定义剩余候选域
+记 $\mathcal{F}$ 为第一类证书已排除的下标集合。由指数互素条件，指数的每个素因子都不小于 $n$。
+以 $\mathrm{minFac}(e)$ 表示指数的最小素因子。剩余候选域 $\mathcal{E}$ 定义为同时满足以下条件的整数数对 $(n,e)$ 的集合：
 
-$$\begin{aligned}
-\mathcal E=\{(n,e):\;&12\le n\le2523,\ n\le e<3500,\ n\le\mathrm{minFac}(e),\\
-&9e(n-4)<22680(n-1)+2520,\ n\notin\mathcal F\}.
-\end{aligned}$$
+$$
+12\le n\le2523,\qquad n\le e<3500,
+$$
+
+$$
+n\le\mathrm{minFac}(e),\qquad n\notin\mathcal{F},
+$$
+
+$$
+9e(n-4)<22680(n-1)+2520.
+$$
 
 覆盖性论证包括以下三个步骤：
 
