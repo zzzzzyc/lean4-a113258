@@ -79,10 +79,10 @@ $33^4\equiv46\not\equiv1\pmod{53}$，因此 $a(12)$ 不是十三次幂。
 ### 4. 候选域与覆盖性证明
 
 记 $\mathcal F$ 为第一类证书已排除的下标集合。由指数互素条件，$e$ 的每个素因子都不小于 $n$。
-以 $\operatorname{minFac}(e)$ 表示 $e$ 的最小素因子，定义剩余候选域
+以 $\mathrm{minFac}(e)$ 表示 $e$ 的最小素因子，定义剩余候选域
 
 $$\begin{aligned}
-\mathcal E=\{(n,e):\;&12\le n\le2523,\ n\le e<3500,\ n\le\operatorname{minFac}(e),\\
+\mathcal E=\{(n,e):\;&12\le n\le2523,\ n\le e<3500,\ n\le\mathrm{minFac}(e),\\
 &9e(n-4)<22680(n-1)+2520,\ n\notin\mathcal F\}.
 \end{aligned}$$
 
@@ -163,7 +163,7 @@ The remaining candidate exponents are excluded by the corresponding certificates
 ### 4. Candidate domain and coverage
 
 After removing the indices certified by factor rows, `expectedPairs` enumerates
-the bounded domain using $n\le\operatorname{minFac}(e)$ and the strict integer inequality.
+the bounded domain using $n\le\mathrm{minFac}(e)$ and the strict integer inequality.
 `expectedPairs_mem` symbolically proves that every remaining hypothetical counterexample
 belongs to this list. A separate computation checks equality of the certificate-key list
 and `expectedPairs`. The coverage theorem then retrieves a checked row for each possible pair.
