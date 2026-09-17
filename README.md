@@ -1,6 +1,6 @@
 # A113258: No Perfect Powers for n > 4
 
-Author: **zzzzzyc / zhang yichuan**
+Author: **YiChuan Zhang** (GitHub: [zzzzzyc](https://github.com/zzzzzyc))
 
 Consider the factorial-power sum sequence
 
@@ -11,6 +11,19 @@ $$
 This project proves that, for every natural number $n>4$, there are no natural numbers $b>1$ and $e>1$ such that $a(n)=b^e$.
 
 The main theorem is `LeanA113258.not_perfect_power_gt_four`. The negation of the original existence statement is `LeanA113258.officialConjecture_false`.
+
+## Companion paper and certificate documentation
+
+YiChuan Zhang, *Perfect powers in the OEIS sequence A113258*.
+The companion paper has the reserved Zenodo DOI
+[10.5281/zenodo.22811155](https://doi.org/10.5281/zenodo.22811155).
+This DOI identifies the paper, not the software archive, and will resolve after the paper record is published.
+
+[CERTIFICATES.md](CERTIFICATES.md) specifies the certificate formats, their mathematical justification,
+the coverage argument, computational examples, and the corresponding Lean source files in English and Chinese.
+The proof-source snapshot documented by the paper is
+[`8f84e18b47c99512321d136dcb7887415b30de1f`](https://github.com/zzzzzyc/lean4-a113258/commit/8f84e18b47c99512321d136dcb7887415b30de1f).
+Subsequent documentation updates do not modify that proof snapshot.
 
 ## Build and audit
 
@@ -44,7 +57,7 @@ Prime-factor and modular-arithmetic certificates cover this finite range and exc
 ## Trust assumptions
 
 - The analytic lower bound and the reduction from the infinite range depend only on the three standard axioms `propext`, `Classical.choice`, and `Quot.sound`.
-- The main theorems additionally use **119 `native_decide` computational dependencies**: 10 batches of prime-factor certificates, 108 batches of modular-arithmetic certificates, and one coverage-list check. These computations additionally trust the Lean compiler. The number 119 counts computational dependencies, not candidates.
+- The main theorems additionally use **119 `native_decide` computational dependencies**: 10 batches of prime-factor certificates, 108 batches of modular-arithmetic certificates, and one coverage-list check. These computations additionally trust the Lean compiler and runtime. The number 119 counts computational dependencies, not candidates.
 - The final proof does not depend on `sorryAx` or an unproved Laurent assumption. The formalization establishes the special two-logarithm lower bound needed for this problem.
 
 ## Source files
