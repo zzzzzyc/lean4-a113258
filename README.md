@@ -17,7 +17,6 @@ The main theorem is `LeanA113258.not_perfect_power_gt_four`. The negation of the
 YiChuan Zhang, *Perfect powers in the OEIS sequence A113258*.
 The companion paper has the reserved Zenodo DOI
 [10.5281/zenodo.22811155](https://doi.org/10.5281/zenodo.22811155).
-This DOI identifies the paper, not the software archive, and will resolve after the paper record is published.
 
 [CERTIFICATES.md](CERTIFICATES.md) specifies the certificate formats, their mathematical justification,
 the coverage argument, computational examples, and the corresponding Lean source files in English and Chinese.
