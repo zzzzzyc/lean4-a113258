@@ -1,5 +1,7 @@
 # A113258: No Perfect Powers for n > 4
 
+[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22811155.svg)](https://doi.org/10.5281/zenodo.22811155)
+
 Author: **YiChuan Zhang** (GitHub: [zzzzzyc](https://github.com/zzzzzyc))
 
 Consider the factorial-power sum sequence
