@@ -1,0 +1,17 @@
+{
+  "title": "A113258: Lean 4 formalization and finite certificates",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "creators": [{"name": "Zhang, YiChuan"}],
+  "description": "Lean 4 source and finite certificates proving that the OEIS sequence A113258 has no perfect-power term after its fourth term. Includes certificate specifications, executable examples, build instructions, and an axiom audit. The final theorems use native_decide for finite checks and additionally trust the Lean compiler and runtime. This software release accompanies the paper Perfect powers in the OEIS sequence A113258.",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": ["number theory", "perfect powers", "Lean 4", "formal verification", "A113258"],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.22811155",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}
